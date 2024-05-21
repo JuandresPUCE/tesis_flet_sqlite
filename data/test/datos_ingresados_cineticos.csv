@@ -1,5 +1,5 @@
 id;tiempo;concentracion;otra_propiedad;conversion_reactivo_limitante;tipo_especie;id_condiciones_iniciales;nombre_data;nombre_reaccion;especie_quimica
-1;0;0.017;;0.0;reactivo_limitante;1;01_DisenoReactores_Roman_p2r_p24;2A=>R;A
+1;0;0.017;;0.0;reactivo_limitante;1;01_DisenoReactores_Roman_p2r_p25;2A=>R;A
 2;5.446623094;0.0153;;0.1;reactivo_limitante;1;01_DisenoReactores_Roman_p2r_p25;2A=>R;A
 3;12.25490196;0.0136;;0.2;reactivo_limitante;1;01_DisenoReactores_Roman_p2r_p25;2A=>R;A
 4;21.00840336;0.0119;;0.3;reactivo_limitante;1;01_DisenoReactores_Roman_p2r_p25;2A=>R;A
