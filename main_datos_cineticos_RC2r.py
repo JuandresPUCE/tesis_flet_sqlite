@@ -347,4 +347,5 @@ def main(page: ft.Page):
     form_ui = FormUi(page)
     page.add(form_ui)
 
-ft.app(main)
+ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8585)
+#ft.app(main)

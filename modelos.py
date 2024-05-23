@@ -37,6 +37,10 @@ class DatosIngresadosCineticos(Base):
     nombre_reaccion = Column(String)
     especie_quimica = Column(String)
 
+    def __str__(self):
+        return f"ID: {self.id}, Tiempo: {self.tiempo}, Concentración: {self.concentracion}, Otra Propiedad: {self.otra_propiedad}, Conversión Reactivo Limitante: {self.conversion_reactivo_limitante}, Tipo de Especie: {self.tipo_especie}, ID Condiciones Iniciales: {self.id_condiciones_iniciales}, Nombre de Data: {self.nombre_data}, Nombre de Reacción: {self.nombre_reaccion}, Especie Química: {self.especie_quimica}"
+
+
 class CondicionesManager:
     def __init__(self):
         db_path = r"D:\candidatos_proyectof\tesis_tec\dataReactor\tesis_flet_sqlite\tesis_flet_sqlite\data\data_reactor1.db"
@@ -95,6 +99,28 @@ class DatosCineticosMananger:
         session = self.Session()
         datos = session.query(DatosIngresadosCineticos)
         return datos
+
+    """
+    def get_datos(self, formato=None):
+        session = self.Session()
+        if not formato:
+            datos = session.query(DatosIngresadosCineticos).all()
+        else:
+            datos = session.query(DatosIngresadosCineticos)
+        return datos
+
+    """ 
+    """
+    def get_datos(self, formato=None):
+        session = self.Session()
+        if formato == 'pandas':
+            datos = session.query(DatosIngresadosCineticos)
+        else:
+            datos = session.query(DatosIngresadosCineticos).all()
+        return datos
+    """
+
+
     
     def get_datos_por_nombre(self, nombre_data):
         session = self.Session()
